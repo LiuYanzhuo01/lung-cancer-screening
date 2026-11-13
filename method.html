@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology | Early Lung Cancer Screening</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f4f7fc; color: #1e2a3a; line-height: 1.6; }
+        header { background: linear-gradient(135deg, #0b2b4f, #1a4a7a); color: white; padding: 2.5rem 2rem 2rem; text-align: center; }
+        header h1 { font-size: 1.9rem; font-weight: 600; }
+        header p { opacity: 0.9; margin-top: 0.4rem; }
+        nav { background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 0.8rem 2rem; display: flex; justify-content: center; gap: 2.5rem; position: sticky; top: 0; z-index: 10; }
+        nav a { text-decoration: none; color: #1a4a7a; font-weight: 500; padding: 0.3rem 0; border-bottom: 2px solid transparent; }
+        nav a:hover, nav a.active { border-bottom-color: #1a4a7a; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 2.5rem 2rem; }
+        .step { background: white; border-radius: 12px; padding: 1.8rem 2rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.04); position: relative; }
+        .step-number { display: inline-block; background: #1a4a7a; color: white; width: 32px; height: 32px; border-radius: 50%; text-align: center; line-height: 32px; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.8rem; }
+        .step h3 { font-size: 1.15rem; color: #0b2b4f; margin-bottom: 0.5rem; }
+        .step p { color: #3a4a5a; font-size: 0.97rem; }
+        .pipeline { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0; }
+        .pipe-item { background: white; border: 2px solid #c8daf0; border-radius: 10px; padding: 1rem 1.5rem; font-weight: 500; color: #1a4a7a; font-size: 0.95rem; }
+        .arrow { font-size: 1.5rem; color: #8a9aaa; align-self: center; }
+        footer { text-align: center; padding: 2rem; color: #7a8a9a; font-size: 0.9rem; border-top: 1px solid #dce5f0; margin-top: 2rem; }
+        @media (max-width: 600px) { .arrow { display: none; } .pipeline { flex-direction: column; align-items: center; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Methodology</h1>
+    <p>Multimodal Deep Learning Pipeline for PET/CT Analysis</p>
+</header>
+
+<nav>
+    <a href="index.html">Overview</a>
+    <a href="method.html" class="active">Method</a>
+    <a href="results.html">Results &amp; Impact</a>
+</nav>
+
+<div class="container">
+
+    <div class="pipeline">
+        <span class="pipe-item">PET/CT Input</span>
+        <span class="arrow">&rarr;</span>
+        <span class="pipe-item">Preprocessing &amp; Registration</span>
+        <span class="arrow">&rarr;</span>
+        <span class="pipe-item">Multimodal Feature Extraction</span>
+        <span class="arrow">&rarr;</span>
+        <span class="pipe-item">Deep Learning Fusion</span>
+        <span class="arrow">&rarr;</span>
+        <span class="pipe-item">Risk Stratification</span>
+    </div>
+
+    <div class="step">
+        <span class="step-number">1</span>
+        <h3>Data Acquisition &amp; Preprocessing</h3>
+        <p>Paired PET and CT volumes are collected and spatially registered. CT images provide high-resolution anatomical context, while PET images supply metabolic activity maps. Standardized uptake value (SUV) normalization and intensity windowing are applied to reduce inter-scan variability.</p>
+    </div>
+
+    <div class="step">
+        <span class="step-number">2</span>
+        <h3>Multimodal Feature Extraction</h3>
+        <p>Separate feature encoders process CT and PET channels. CT-focused layers capture nodule morphology (shape, margin, texture), while PET-focused layers capture metabolic heterogeneity and intensity distribution. Early-stage lesions often show subtle functional changes that may precede clear structural abnormalities.</p>
+    </div>
+
+    <div class="step">
+        <span class="step-number">3</span>
+        <h3>Deep Learning Fusion Strategy</h3>
+        <p>Extracted features are fused at an intermediate layer using attention-guided concatenation. The model learns to weight PET and CT contributions adaptively depending on lesion characteristics. This allows the system to leverage metabolic signals when anatomical findings are ambiguous, and vice versa.</p>
+    </div>
+
+    <div class="step">
+        <span class="step-number">4</span>
+        <h3>Classification &amp; Risk Scoring</h3>
+        <p>The fused representation is passed through fully connected layers to output a malignancy risk score. The system is designed to prioritize high sensitivity at the early screening stage, where missing a true positive carries significant clinical consequences.</p>
+    </div>
+
+    <div class="step">
+        <span class="step-number">5</span>
+        <h3>Evaluation Framework</h3>
+        <p>Model performance is assessed using sensitivity, specificity, AUC-ROC, and false positive rate at clinically relevant operating points. Subgroup analysis by nodule size and stage helps evaluate whether the multimodal approach offers particular benefit for the earliest detectable lesions.</p>
+    </div>
+
+</div>
+
+<footer>
+    Early Lung Cancer Screening System &middot; Deep Learning &amp; PET/CT Multimodal Features &middot; Research Showcase
+</footer>
+
+</body>
+</html>

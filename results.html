@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results &amp; Impact | Early Lung Cancer Screening</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f4f7fc; color: #1e2a3a; line-height: 1.6; }
+        header { background: linear-gradient(135deg, #0b2b4f, #1a4a7a); color: white; padding: 2.5rem 2rem 2rem; text-align: center; }
+        header h1 { font-size: 1.9rem; font-weight: 600; }
+        header p { opacity: 0.9; margin-top: 0.4rem; }
+        nav { background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 0.8rem 2rem; display: flex; justify-content: center; gap: 2.5rem; position: sticky; top: 0; z-index: 10; }
+        nav a { text-decoration: none; color: #1a4a7a; font-weight: 500; padding: 0.3rem 0; border-bottom: 2px solid transparent; }
+        nav a:hover, nav a.active { border-bottom-color: #1a4a7a; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 2.5rem 2rem; }
+        .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .metric-card { background: white; border-radius: 12px; padding: 1.8rem 1.2rem; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.04); border-top: 4px solid #1a4a7a; }
+        .metric-value { font-size: 2rem; font-weight: 700; color: #0b2b4f; }
+        .metric-label { font-size: 0.9rem; color: #5a6a7a; margin-top: 0.3rem; }
+        .metric-note { font-size: 0.8rem; color: #8a9aaa; margin-top: 0.4rem; font-style: italic; }
+        .section-title { font-size: 1.4rem; font-weight: 600; color: #0b2b4f; margin: 2rem 0 1rem; border-bottom: 3px solid #d0e0f0; padding-bottom: 0.4rem; display: inline-block; }
+        .impact-box { background: #e8f0fe; border-radius: 12px; padding: 1.8rem 2rem; margin: 1.5rem 0; border: 1px solid #c8daf0; }
+        .impact-box h3 { color: #0b2b4f; margin-bottom: 0.6rem; font-size: 1.1rem; }
+        .impact-box ul { margin-left: 1.2rem; color: #2a3a4a; }
+        .impact-box li { margin-bottom: 0.4rem; }
+        .disclaimer { background: #fff8e8; border-left: 4px solid #e0a800; padding: 1rem 1.5rem; border-radius: 0 8px 8px 0; font-size: 0.9rem; color: #6a5a3a; margin-top: 2rem; }
+        footer { text-align: center; padding: 2rem; color: #7a8a9a; font-size: 0.9rem; border-top: 1px solid #dce5f0; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Results &amp; Impact</h1>
+    <p>Performance Highlights and Clinical Relevance</p>
+</header>
+
+<nav>
+    <a href="index.html">Overview</a>
+    <a href="method.html">Method</a>
+    <a href="results.html" class="active">Results &amp; Impact</a>
+</nav>
+
+<div class="container">
+
+    <div class="metrics">
+        <div class="metric-card">
+            <div class="metric-value">94.2%</div>
+            <div class="metric-label">Sensitivity</div>
+            <div class="metric-note">Illustrative target</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-value">88.7%</div>
+            <div class="metric-label">Specificity</div>
+            <div class="metric-note">Illustrative target</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-value">0.961</div>
+            <div class="metric-label">AUC-ROC</div>
+            <div class="metric-note">Illustrative target</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-value">+7.3%</div>
+            <div class="metric-label">AUC Gain vs. CT-only</div>
+            <div class="metric-note">Multimodal advantage</div>
+        </div>
+    </div>
+
+    <p style="font-size:0.9rem; color:#6a7a8a; text-align:center; margin-top:-0.5rem;">* Figures shown are representative targets for a research showcase. Actual performance depends on dataset, training protocol, and validation design.</p>
+
+    <h2 class="section-title">Why Multimodal PET/CT Matters</h2>
+    <p>CT alone excels at depicting structure, but early malignant changes can be subtle or ambiguous. PET adds metabolic context that may reveal abnormal activity before clear morphological signs appear. By learning from both modalities jointly, the system can potentially reduce false negatives in early screening while maintaining clinically acceptable specificity.</p>
+
+    <h2 class="section-title">Potential Clinical Impact</h2>
+
+    <div class="impact-box">
+        <h3>For Screening Workflows</h3>
+        <ul>
+            <li>Assist radiologists by flagging high-risk nodules that warrant closer review.</li>
+            <li>Provide a quantitative risk score alongside conventional visual assessment.</li>
+            <li>Support triage in high-volume screening settings where reading time is limited.</li>
+        </ul>
+    </div>
+
+    <div class="impact-box">
+        <h3>For Early Detection Research</h3>
+        <ul>
+            <li>Demonstrate the value of fusing functional and anatomical imaging features.</li>
+            <li>Establish a reproducible pipeline for multimodal lung cancer AI studies.</li>
+            <li>Highlight the importance of sensitivity-focused evaluation in screening contexts.</li>
+        </ul>
+    </div>
+
+    <div class="disclaimer">
+        <strong>Note:</strong> This website is a research project showcase. The system described is intended for research and educational purposes and has not been approved for clinical diagnostic use. Any clinical application would require rigorous validation, regulatory review, and prospective trials.
+    </div>
+
+</div>
+
+<footer>
+    Early Lung Cancer Screening System &middot; Deep Learning &amp; PET/CT Multimodal Features &middot; Research Showcase
+</footer>
+
+</body>
+</html>
